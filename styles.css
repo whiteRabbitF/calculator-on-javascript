@@ -1,0 +1,173 @@
+:root {
+  --background: #3f3838af;
+  --font: #1a1818;
+  --border: #494343;
+  --screen: #7c4b4b;
+  --calculator: #504646d0;
+  --btn: #eee;
+  --btn-hover: #ddd;
+  --btn-active: #ccc;
+  --btn-red: #BD4444;
+  --btn-red-hover: #881d1d;
+  --btn-red-active: rgba(112, 22, 22, 0.911);
+  --btn-blue: #6A88AD;
+  --btn-blue-hover: #4775AD;
+  --btn-blue-active: rgba(36, 36, 117, 0.829);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--font);
+  font-family: 'Podkova', serif;
+  line-height: 1.6;
+  margin-bottom: 100px;
+}
+
+button {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+/* MAIN SECTION*/
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  min-height: 500px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.calculator {
+  width: 500px;
+  height: 600px;
+  border: 4px solid #4e4c4cdc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #332D2D;
+}
+
+.screen {
+  padding: 15px 20px;
+  border: 2px var(--border) solid;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #E3E1E1;
+  text-align: right;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.screen-last {
+  min-height: 32px;
+  font-size: 20px;
+}
+
+.screen-current {
+  min-height: 64px;
+  font-size: 40px;
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.btn {
+  padding: 20px;
+  border: 2px var(--border) solid;
+  border-radius: 5px;
+  background-color: var(--btn);
+  font-size: 20px;
+  color: #1b1a1a;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
+}
+
+.btn:active {
+  background-color: var(--btn-active);
+}
+
+.btn-red {
+  background-color: var(--btn-red);
+}
+
+.btn-red:hover {
+  background-color: var(--btn-red-hover);
+}
+
+.btn-red:active {
+  background-color: var(--btn-red-active);
+}
+
+.btn-blue {
+  background-color: var(--btn-blue);
+}
+
+.btn-blue:hover {
+  background-color: var(--btn-blue-hover);
+}
+
+.btn-blue:active {
+  background-color: var(--btn-blue-active);
+}
+
+/* Disables input spinners in calc screen */
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* FOOTER SECTION*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.github {
+  color: var(--font);
+  font-size: 20px;
+  position: absolute;
+  margin-left: -220px;
+}
+
+.github:hover {
+  color: #2270b9;
+  box-shadow: 10px;
+}
